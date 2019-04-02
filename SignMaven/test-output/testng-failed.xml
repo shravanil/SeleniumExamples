@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="TestScripts.Requests">
+        <methods>
+          <include name="beforesuite"/>
+          <include name="EditRequestAddCustomFieldsUpdatePrivileges"/>
+          <include name="aftersuite"/>
+          <include name="aftermethod"/>
+          <include name="RequestEditUpdateSendLater"/>
+          <include name="beforemethod"/>
+        </methods>
+      </class> <!-- TestScripts.Requests -->
+      <class name="TestScripts.Templates">
+        <methods>
+          <include name="ActivateDeactivateArchiveCopyDeleteTemplate"/>
+          <include name="beforesuite"/>
+          <include name="aftersuite"/>
+          <include name="aftermethod"/>
+          <include name="beforemethod"/>
+        </methods>
+      </class> <!-- TestScripts.Templates -->
+      <class name="TestScripts.Reports">
+        <methods>
+          <include name="beforesuite"/>
+          <include name="aftersuite"/>
+          <include name="aftermethod"/>
+          <include name="AllActionInMetricsReport"/>
+          <include name="beforemethod"/>
+        </methods>
+      </class> <!-- TestScripts.Reports -->
+      <class name="TestScripts.Admin">
+        <methods>
+          <include name="beforesuite"/>
+          <include name="AllActionsOfLogoCompanySearchAndManagePassword"/>
+          <include name="aftersuite"/>
+          <include name="aftermethod"/>
+          <include name="AdminCreationAndUpdation"/>
+          <include name="beforemethod"/>
+          <include name="ToVerifyCustomizeAndBulkDownloadModules"/>
+        </methods>
+      </class> <!-- TestScripts.Admin -->
+      <class name="TestScripts.CreateRequest">
+        <methods>
+          <include name="beforesuite"/>
+          <include name="aftersuite"/>
+          <include name="aftermethod"/>
+          <include name="RequestApprovalProcessWithMultipleSigners"/>
+          <include name="beforemethod"/>
+        </methods>
+      </class> <!-- TestScripts.CreateRequest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

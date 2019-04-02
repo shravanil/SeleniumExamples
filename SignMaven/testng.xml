@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+     <class name="TestScripts.Login"/>
+     <class name="TestScripts.CreateRequest">
+       <methods>
+				<include name="CreateRequestSaveToDraft">   </include>	
+				<include name="RequestApprovalProcessWithSingleSigner"> </include>
+				<include name="RequestApprovalProcessWithMultipleSigners">  </include>
+				<include name="RequestApprovalProcessWithMultipleDocuments"> </include>
+				<include name="RequestApprovalProcessWithSupportingDocuments"> </include>
+				<include name="RequestAttachmentRequiredAtTheTimeOfApproval"> </include>
+				<include name="TemplateCreationActivationAndRequestCreationApprovalProcess"> </include>
+				<include name="GroupRequestApprovalProcess"> </include>
+				<include name="GroupRequestApprovalProcessbyUploadingSignersFile"> </include>
+				<include name="InPersonRequestCreation"> </include>
+		  </methods>
+	  </class>
+	  <class name="TestScripts.Dashboard">
+      		<methods>
+				<include name="ToVerifyAllActionsInWaitingForOthers">   </include>	
+				<include name="ToVerifyAllActionsInNeedToVerify"> </include>
+				<include name="ToVerifyAllActionsInMySignedItems">  </include>
+				<include name="ToVerifyAllActionsInArchivedItems"> </include>
+				<include name="ToVerifyAllActionsOfInPersonSigning"> </include>
+		 	</methods>
+	  </class>
+	  <class name="TestScripts.Requests">
+      	  <methods>
+				<include name="RequestEditUpdateSendLater">   </include>	
+				<include name="RemoveReplaceVoidBypassSigner"> </include>
+				<include name="EditRequestAddCustomFieldsUpdatePrivileges">  </include>
+		  </methods>
+	  </class>
+	   <class name="TestScripts.Templates">
+     		<methods>
+				<include name="EditUpdateActivateDeactivateDeleteTemplate">   </include>	
+				<include name="ActivateDeactivateArchiveCopyDeleteTemplate"> </include>
+				<include name="PrintAndDownloadTemplateDocument">  </include>
+		 	</methods>
+	  </class>
+	  <class name="TestScripts.Reports">
+      		<methods>
+				<include name="AllActionInMetricsReport">   </include>	
+				<include name="AllActionInDetailedReport"> </include>
+				<include name="AllActionInSignerReport">  </include>
+				<include name="AllActionInCustomFieldReport"> </include>
+		 	</methods>
+	  </class>
+      <class name="TestScripts.SuperAdmin">
+	      <methods>
+				<include name="AllActionsOfCompanyModule">   </include>	
+				<include name="AllActionsOfUserAndCustomizeModule"> </include>
+				<include name="UserRegistration">  </include>
+		  </methods>
+	  </class>
+      <class name="TestScripts.MyPreferences">
+      	  <methods>
+				<include name="ToUpdatePersonalInformation">   </include>	
+				<include name="ToVerifyChangePassword"> </include>
+				<include name="ToVerifySignaturefunctionality">  </include>
+				<include name="ToVerifyIntialfunctionality"> </include>
+				<exclude name="ToVerifyAccountSettings"> </exclude>
+				<include name="ToVerifyAddressBook"> </include>
+				<include name="ToVerifyReceivedItems"> </include>
+		  </methods>
+	  </class>
+      <class name="TestScripts.Admin">
+      	  <methods>
+				<include name="CompanyDetailsUpdation">   </include>	
+				<include name="CompanyDetailsActivation"> </include>
+				<include name="AdminCreationAndUpdation">  </include>
+				<include name="AllActionsOfLogoCompanySearchAndManagePassword"> </include>
+				<include name="ExportAdmin"> </include>
+				<include name="GroupCreationScenarios"> </include>
+				<include name="GroupUpdationActivateDeactivate"> </include>
+				<include name="GroupMembersUpdationActivateDeactivate"> </include>
+				<include name="ToVerifyCustomizeAndBulkDownloadModules"> </include>
+		  </methods>
+	  </class>
+     
+      
+      
+      
+     
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

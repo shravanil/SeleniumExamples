@@ -1,0 +1,747 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>36/8/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Apr 02 16:16:07 IST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>7364 seconds (7364964 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestScripts.Templates.ActivateDeactivateArchiveCopyDeleteTemplate()'><b>ActivateDeactivateArchiveCopyDeleteTemplate</b><br>Test class: TestScripts.Templates</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:90)
+	at ApplicationPages.HomePage.clickonTemplatesMenu(HomePage.java:190)
+	at TestScripts.Templates.ActivateDeactivateArchiveCopyDeleteTemplate(Templates.java:157)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace9930844", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace9930844'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:90)
+	at ApplicationPages.HomePage.clickonTemplatesMenu(HomePage.java:190)
+	at TestScripts.Templates.ActivateDeactivateArchiveCopyDeleteTemplate(Templates.java:157)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>68</td>
+<td>TestScripts.Templates@3c6f6d</td></tr>
+<tr>
+<td title='TestScripts.Admin.AdminCreationAndUpdation()'><b>AdminCreationAndUpdation</b><br>Test class: TestScripts.Admin</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td[2]/div[contains(text(),&apos;admincreation6@automation.com&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49349}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e267dc3ee28e9e7f9b690a1cc7c00dbb
+*** Element info: {Using=xpath, value=//table/tbody/tr/td[2]/div[contains(text(),&apos;admincreation6@automation.com&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestScripts.Admin.AdminCreationAndUpdation(Admin.java:211)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace11573927", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace11573927'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td[2]/div[contains(text(),&apos;admincreation6@automation.com&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:49349}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e267dc3ee28e9e7f9b690a1cc7c00dbb
+*** Element info: {Using=xpath, value=//table/tbody/tr/td[2]/div[contains(text(),&apos;admincreation6@automation.com&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestScripts.Admin.AdminCreationAndUpdation(Admin.java:211)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>158</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.Reports.AllActionInMetricsReport()'><b>AllActionInMetricsReport</b><br>Test class: TestScripts.Reports</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.ReportsPage.clickonEditIcon(ReportsPage.java:177)
+	at TestScripts.Reports.AllActionInMetricsReport(Reports.java:50)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace7604706", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace7604706'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.ReportsPage.clickonEditIcon(ReportsPage.java:177)
+	at TestScripts.Reports.AllActionInMetricsReport(Reports.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>98</td>
+<td>TestScripts.Reports@1eb8acf</td></tr>
+<tr>
+<td title='TestScripts.Admin.AllActionsOfLogoCompanySearchAndManagePassword()'><b>AllActionsOfLogoCompanySearchAndManagePassword</b><br>Test class: TestScripts.Admin</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.SACompanyPage.clickonAcceptBtn(SACompanyPage.java:317)
+	at TestScripts.Admin.AllActionsOfLogoCompanySearchAndManagePassword(Admin.java:256)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace18785053", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace18785053'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.SACompanyPage.clickonAcceptBtn(SACompanyPage.java:317)
+	at TestScripts.Admin.AllActionsOfLogoCompanySearchAndManagePassword(Admin.java:256)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>53</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.Requests.EditRequestAddCustomFieldsUpdatePrivileges()'><b>EditRequestAddCustomFieldsUpdatePrivileges</b><br>Test class: TestScripts.Requests</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td[2][contains(text(),&apos;Leave Type&apos;)]/following-sibling::td[6]/a[1]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63000}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 6d723391c7f5b0c4e3e67026e7543c00
+*** Element info: {Using=xpath, value=//table/tbody/tr/td[2][contains(text(),&apos;Leave Type&apos;)]/following-sibling::td[6]/a[1]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestScripts.Requests.EditRequestAddCustomFieldsUpdatePrivileges(Requests.java:782)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace13332985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace13332985'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//table/tbody/tr/td[2][contains(text(),&apos;Leave Type&apos;)]/following-sibling::td[6]/a[1]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:63000}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: 6d723391c7f5b0c4e3e67026e7543c00
+*** Element info: {Using=xpath, value=//table/tbody/tr/td[2][contains(text(),&apos;Leave Type&apos;)]/following-sibling::td[6]/a[1]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at TestScripts.Requests.EditRequestAddCustomFieldsUpdatePrivileges(Requests.java:782)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>109</td>
+<td>TestScripts.Requests@1371b2d</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.RequestApprovalProcessWithMultipleSigners()'><b>RequestApprovalProcessWithMultipleSigners</b><br>Test class: TestScripts.CreateRequest</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:90)
+	at ApplicationPages.HomePage.clickonNeedToSign(HomePage.java:274)
+	at TestScripts.CreateRequest.RequestApprovalProcessWithMultipleSigners(CreateRequest.java:333)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace22924010", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace22924010'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:90)
+	at ApplicationPages.HomePage.clickonNeedToSign(HomePage.java:274)
+	at TestScripts.CreateRequest.RequestApprovalProcessWithMultipleSigners(CreateRequest.java:333)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>240</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.Requests.RequestEditUpdateSendLater()'><b>RequestEditUpdateSendLater</b><br>Test class: TestScripts.Requests</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mainhead&apos;]/div[1]/span[contains(text(),&apos;All  Requests&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62518}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e78d80de2ceabf4ad721c14cbfdd81d1
+*** Element info: {Using=xpath, value=//div[@class=&apos;mainhead&apos;]/div[1]/span[contains(text(),&apos;All  Requests&apos;)]}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+	at TestScripts.Requests.RequestEditUpdateSendLater(Requests.java:114)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace31391422", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace31391422'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@class=&apos;mainhead&apos;]/div[1]/span[contains(text(),&apos;All  Requests&apos;)]&quot;}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.41.578737 (49da6702b16031c40d63e5618de03a32ff6c197e),platform=Windows NT 6.3.9600 x86) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;IBI115&apos;, ip: &apos;192.168.0.115&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.41.578737 (49da6702b16031..., userDataDir: C:\Users\SHRAVA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62518}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
+Session ID: e78d80de2ceabf4ad721c14cbfdd81d1
+*** Element info: {Using=xpath, value=//div[@class=&apos;mainhead&apos;]/div[1]/span[contains(text(),&apos;All  Requests&apos;)]}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:322)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:424)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:314)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy12.isDisplayed(Unknown Source)
+	at TestScripts.Requests.RequestEditUpdateSendLater(Requests.java:114)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>218</td>
+<td>TestScripts.Requests@1371b2d</td></tr>
+<tr>
+<td title='TestScripts.Admin.ToVerifyCustomizeAndBulkDownloadModules()'><b>ToVerifyCustomizeAndBulkDownloadModules</b><br>Test class: TestScripts.Admin</td>
+<td><div><pre>java.lang.AssertionError: expected [true] but found [false]
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.CustomizePage.setHours(CustomizePage.java:104)
+	at TestScripts.Admin.ToVerifyCustomizeAndBulkDownloadModules(Admin.java:614)
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace24331944", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace24331944'><pre>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:96)
+	at org.testng.Assert.failNotEquals(Assert.java:776)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:568)
+	at org.testng.Assert.assertEquals(Assert.java:578)
+	at FrameworkLibrary.ReportLibrary.reportEvent(ReportLibrary.java:105)
+	at ApplicationPages.CustomizePage.setHours(CustomizePage.java:104)
+	at TestScripts.Admin.ToVerifyCustomizeAndBulkDownloadModules(Admin.java:614)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+	at org.testng.TestNG.runSuites(TestNG.java:1049)
+	at org.testng.TestNG.run(TestNG.java:1017)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>28</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestScripts.Reports.AllActionInCustomFieldReport()'><b>AllActionInCustomFieldReport</b><br>Test class: TestScripts.Reports</td>
+<td></td>
+<td>46</td>
+<td>TestScripts.Reports@1eb8acf</td></tr>
+<tr>
+<td title='TestScripts.Reports.AllActionInDetailedReport()'><b>AllActionInDetailedReport</b><br>Test class: TestScripts.Reports</td>
+<td></td>
+<td>151</td>
+<td>TestScripts.Reports@1eb8acf</td></tr>
+<tr>
+<td title='TestScripts.Reports.AllActionInSignerReport()'><b>AllActionInSignerReport</b><br>Test class: TestScripts.Reports</td>
+<td></td>
+<td>80</td>
+<td>TestScripts.Reports@1eb8acf</td></tr>
+<tr>
+<td title='TestScripts.SuperAdmin.AllActionsOfCompanyModule()'><b>AllActionsOfCompanyModule</b><br>Test class: TestScripts.SuperAdmin</td>
+<td></td>
+<td>142</td>
+<td>TestScripts.SuperAdmin@1c8530f</td></tr>
+<tr>
+<td title='TestScripts.SuperAdmin.AllActionsOfUserAndCustomizeModule()'><b>AllActionsOfUserAndCustomizeModule</b><br>Test class: TestScripts.SuperAdmin</td>
+<td></td>
+<td>199</td>
+<td>TestScripts.SuperAdmin@1c8530f</td></tr>
+<tr>
+<td title='TestScripts.Admin.CompanyDetailsActivation()'><b>CompanyDetailsActivation</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>192</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.Admin.CompanyDetailsUpdation()'><b>CompanyDetailsUpdation</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>195</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.CreateRequestSaveToDraft()'><b>CreateRequestSaveToDraft</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>120</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.Templates.EditUpdateActivateDeactivateDeleteTemplate()'><b>EditUpdateActivateDeactivateDeleteTemplate</b><br>Test class: TestScripts.Templates</td>
+<td></td>
+<td>101</td>
+<td>TestScripts.Templates@3c6f6d</td></tr>
+<tr>
+<td title='TestScripts.Admin.ExportAdmin()'><b>ExportAdmin</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>94</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.Login.ForgotPasswordAndUserRegistratation()'><b>ForgotPasswordAndUserRegistratation</b><br>Test class: TestScripts.Login</td>
+<td></td>
+<td>61</td>
+<td>TestScripts.Login@ac3dc3</td></tr>
+<tr>
+<td title='TestScripts.Admin.GroupCreationScenarios()'><b>GroupCreationScenarios</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>59</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.Admin.GroupMembersUpdationActivateDeactivate()'><b>GroupMembersUpdationActivateDeactivate</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>50</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.GroupRequestApprovalProcess()'><b>GroupRequestApprovalProcess</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>247</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.GroupRequestApprovalProcessbyUploadingSignersFile()'><b>GroupRequestApprovalProcessbyUploadingSignersFile</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>235</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.Admin.GroupUpdationActivateDeactivate()'><b>GroupUpdationActivateDeactivate</b><br>Test class: TestScripts.Admin</td>
+<td></td>
+<td>48</td>
+<td>TestScripts.Admin@1738a82</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.InPersonRequestCreation()'><b>InPersonRequestCreation</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>131</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.Templates.PrintAndDownloadTemplateDocument()'><b>PrintAndDownloadTemplateDocument</b><br>Test class: TestScripts.Templates</td>
+<td></td>
+<td>103</td>
+<td>TestScripts.Templates@3c6f6d</td></tr>
+<tr>
+<td title='TestScripts.Requests.RemoveReplaceVoidBypassSigner()'><b>RemoveReplaceVoidBypassSigner</b><br>Test class: TestScripts.Requests</td>
+<td></td>
+<td>182</td>
+<td>TestScripts.Requests@1371b2d</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.RequestApprovalProcessWithMultipleDocuments()'><b>RequestApprovalProcessWithMultipleDocuments</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>183</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.RequestApprovalProcessWithSingleSigner()'><b>RequestApprovalProcessWithSingleSigner</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>192</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.RequestApprovalProcessWithSupportingDocuments()'><b>RequestApprovalProcessWithSupportingDocuments</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>124</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.RequestAttachmentRequiredAtTheTimeOfApproval()'><b>RequestAttachmentRequiredAtTheTimeOfApproval</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>173</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.CreateRequest.TemplateCreationActivationAndRequestCreationApprovalProcess()'><b>TemplateCreationActivationAndRequestCreationApprovalProcess</b><br>Test class: TestScripts.CreateRequest</td>
+<td></td>
+<td>272</td>
+<td>TestScripts.CreateRequest@eebfca</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToUpdatePersonalInformation()'><b>ToUpdatePersonalInformation</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>65</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToVerifyAddressBook()'><b>ToVerifyAddressBook</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>54</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.Dashboard.ToVerifyAllActionsInArchivedItems()'><b>ToVerifyAllActionsInArchivedItems</b><br>Test class: TestScripts.Dashboard</td>
+<td></td>
+<td>309</td>
+<td>TestScripts.Dashboard@718207</td></tr>
+<tr>
+<td title='TestScripts.Dashboard.ToVerifyAllActionsInMySignedItems()'><b>ToVerifyAllActionsInMySignedItems</b><br>Test class: TestScripts.Dashboard</td>
+<td></td>
+<td>291</td>
+<td>TestScripts.Dashboard@718207</td></tr>
+<tr>
+<td title='TestScripts.Dashboard.ToVerifyAllActionsInNeedToVerify()'><b>ToVerifyAllActionsInNeedToVerify</b><br>Test class: TestScripts.Dashboard</td>
+<td></td>
+<td>417</td>
+<td>TestScripts.Dashboard@718207</td></tr>
+<tr>
+<td title='TestScripts.Dashboard.ToVerifyAllActionsInWaitingForOthers()'><b>ToVerifyAllActionsInWaitingForOthers</b><br>Test class: TestScripts.Dashboard</td>
+<td></td>
+<td>435</td>
+<td>TestScripts.Dashboard@718207</td></tr>
+<tr>
+<td title='TestScripts.Dashboard.ToVerifyAllActionsOfInPersonSigning()'><b>ToVerifyAllActionsOfInPersonSigning</b><br>Test class: TestScripts.Dashboard</td>
+<td></td>
+<td>214</td>
+<td>TestScripts.Dashboard@718207</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToVerifyChangePassword()'><b>ToVerifyChangePassword</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>31</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToVerifyIntialfunctionality()'><b>ToVerifyIntialfunctionality</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>44</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToVerifyReceivedItems()'><b>ToVerifyReceivedItems</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>144</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.MyPreferences.ToVerifySignaturefunctionality()'><b>ToVerifySignaturefunctionality</b><br>Test class: TestScripts.MyPreferences</td>
+<td></td>
+<td>53</td>
+<td>TestScripts.MyPreferences@3c468</td></tr>
+<tr>
+<td title='TestScripts.SuperAdmin.UserRegistration()'><b>UserRegistration</b><br>Test class: TestScripts.SuperAdmin</td>
+<td></td>
+<td>33</td>
+<td>TestScripts.SuperAdmin@1c8530f</td></tr>
+</table><p>
+</body>
+</html>

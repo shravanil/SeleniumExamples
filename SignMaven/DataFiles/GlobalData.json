@@ -1,0 +1,11 @@
+{
+	"BrowserName":"chrome",
+	"BaseURL":"http://192.168.10.101/sutisign/",
+	"Username":"shravanim@ibt.example.com",
+	"Password":"algorithm",
+	"BaseURL1":"http://192.168.0.230/sutisign_hr/",
+	"Username1":"noreply-SutiHR@sutisoft.com",
+	"Password1":"testing",
+	"SAUsername":"sutisignAdmin",
+	"SAPassword":"testing"
+}
